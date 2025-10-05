@@ -1,45 +1,227 @@
-<!DOCTYPE html>  <!-- Indica que es HTML5 -->
-<html lang="es"> <!-- Documento en español -->
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8"> <!-- Soporta acentos -->
-    <title>Mi página</title> <!-- Título de la pestaña -->
+    <meta charset="UTF-8">
+    <title>Mi página</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        th {
+            background-color: #cce5ff;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Menú de navegación -->
     <nav>
-<ul>home</ul>
-<ul>organizacion </ul>
-<ul>equipo de trabajo</ul>
-
+        <ul>
+            <li>Home</li>
+            <li>Organización</li>
+            <li>Equipo de Trabajo</li>
+        </ul>
     </nav>
-   <header>
-    <h1></h1> portal de la escuel profesionla de ingenieria </h1>
-    <h2>subtitulo de la pagina</h2>
-</header> 
-<main>
 
-    <div>
+    <!-- Encabezado -->
+    <header>
+        <h1>Portal de la Escuela Profesional de Ingeniería</h1>
+        <h2>Subtítulo de la página</h2>
+    </header> 
 
-        <h2>registro de alumnos</h2>
-       <form>
-        <label for ="nombre">Nombre:</label>
-        <input type="text"  name="nombre" placeholder="Eje. Fredy"
-        oninput="this.value = this.value.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñ\s]/g,'');">
-        <label for ="apellido-paterno">Apellido paterno:</label>                    
-        <input type="text"  name="ap-apellido" placeholder="Eje. quecaño" >
-        <label for ="apellido-materno">Apellido materno:</label>
-        <input type="text"  name="am-apellido" placeholder="Eje. mamani" >
-        <label for ="correo">Correo:</label>    
-        <input type="email"  name="correo" placeholder="Eje.chenis@gmail.com" >
-        <label for ="telefono">Telefono:</label >
-        <input type="tel"  name="telefono" placeholder="Eje. 987654321" >
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Borrar">
+    <!-- Contenido principal -->
+    <main>
 
+        <!-- Formulario -->
+        <div>
+            <h2>REGISTRO DE ALUMNOS</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" placeholder="Ej. fredy"
+                       pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" 
+                       title="Solo se permiten letras y espacios" required>
+                <br><br>
 
-       
-        
-       </form>
-    </div>
-</main><!-- Aquí va el contenido visible -->
+                <label for="apellido-paterno">Apellido Paterno:</label>
+                <input type="text" name="ap-paterno" placeholder="Ej. quecaño"
+                       pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" required>
+                <br><br>
+
+                <label for="apellido-materno">Apellido Materno:</label>
+                <input type="text" name="ap-materno" placeholder="Ej. mamani"
+                       pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" required>
+                <br><br>
+
+                <label for="edad">Edad:</label>
+                <input type="number" name="edad" min="0" max="120" placeholder="Ej. 20" required>
+                <br><br>
+
+                <label for="correo">Email:</label>
+                <input type="email" name="correo" placeholder="Ej. fredy@correo.com" required>
+                <br><br>
+
+                <label>Género:</label>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="femenino" name="genero" value="femenino" required>
+                <label for="femenino">Femenino</label>
+                <br><br>
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </form>
+        </div>
+
+        <hr>
+
+        <!-- Tabla de productos -->
+        <div>
+            <h2>Lista de Productos</h2>
+            <table>
+                <tr>
+                    <th>N°</th>
+                    <th>Producto</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Televisor de 42 pulg</td>
+                    <td>Televisor smart de marca LG</td>
+                    <td>S/ 1,500.00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lavadora de 10 kg</td>
+                    <td>Lavadora smart de marca SAMSUNG</td>
+                    <td>S/ 2,500.00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Cafetera</td>
+                    <td>Cafetera de marca Oster</td>
+                    <td>S/ 300.00</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Microondas</td>
+                    <td>Microondas de marca Oster</td>
+                    <td>S/ 850.00</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <!-- Horario de Clases actualizado según imagen -->
+        <h2>Horario de Clases</h2>
+        <table>
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+
+            <!-- 07:00 -->
+            <tr>
+                <td>07:00 - 07:59</td>
+                <td rowspan="2">Métodos Numéricos</td>
+                <td rowspan="2">Libre</td>
+                <td rowspan="2">Métodos Numéricos</td>
+                <td rowspan="2">Libre</td>
+                <td rowspan="14">Libre</td>
+            </tr>
+
+            <!-- 08:00 -->
+            <tr>
+                <td>08:00 - 08:59</td>
+            </tr>
+
+            <!-- 09:00 -->
+            <tr>
+                <td>09:00 - 09:59</td>
+                <td rowspan="2" colspan="4">Libre</td>
+            </tr>
+
+            <!-- 10:00 -->
+            <tr>
+                <td>10:00 - 10:59</td>
+            </tr>
+
+            <!-- 11:00 -->
+            <tr>
+                <td>11:00 - 11:59</td>
+                <td rowspan="2">Base de Datos 1</td>
+                <td rowspan="2">Teoría General de Autómatas</td>
+                <td rowspan="2">Base de Datos 1</td>
+                <td rowspan="2">Teoría General de Autómatas</td>
+            </tr>
+
+            <!-- 12:00 -->
+            <tr>
+                <td>12:00 - 12:59</td>
+            </tr>
+
+            <!-- 13:00 -->
+            <tr>
+                <td>13:00 - 13:59</td>
+                <td colspan="4">Almuerzo</td>
+            </tr>
+
+            <!-- 14:00 -->
+            <tr>
+                <td>14:00 - 14:59</td>
+                <td rowspan="3">Desarrollo de Aplicaciones WEB 1</td>
+                <td rowspan="3">Libre</td>
+                <td rowspan="7">Libre</td>
+                <td>Libre</td>
+            </tr>
+
+            <!-- 15:00 -->
+            <tr>
+                <td>15:00 - 15:59</td>
+                <td rowspan="2">Desarrollo de Aplicaciones WEB 1</td>
+            </tr>
+
+            <!-- 16:00 -->
+            <tr>
+                <td>16:00 - 16:59</td>
+            </tr>
+
+            <!-- 17:00 -->
+            <tr>
+                <td>17:00 - 17:59</td>
+                <td rowspan="4">Libre</td>
+                <td rowspan="2">Gobierno Electrónico</td>
+                <td rowspan="2">Gobierno Electrónico</td>
+            </tr>
+
+            <!-- 18:00 -->
+            <tr>
+                <td>18:00 - 18:59</td>
+            </tr>
+
+            <!-- 19:00 -->
+            <tr>
+                <td>19:00 - 19:59</td>
+                <td rowspan="2">Autómatas y Control de Procesos</td>
+                <td rowspan="2">Autómatas y Control de Procesos</td>
+            </tr>
+
+            <!-- 20:00 -->
+            <tr>
+                <td>20:00 - 20:59</td>
+            </tr>
+        </table>
+
+    </main>
 </body>
 </html>
