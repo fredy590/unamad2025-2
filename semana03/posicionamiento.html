@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento en CSS</title>
+    <link rel="stylesheet" href="./posicionamiento.css">
+</head>
+<body>
+
+    <h2>Ejemplo de posicionamiento en CSS</h2>
+
+    <!-- Static -->
+    <div style="position: static; background-color: lightblue;">
+        <p>Posición <strong>static</strong> (por defecto, sin movimiento)</p>
+    </div>
+
+    <!-- Relative -->
+    <div style="position: relative; left: 50px; top: 20px; background-color: lightgreen;">
+        <p>Posición <strong>relative</strong> (se mueve respecto a su posición original)</p>
+    </div>
+
+    <!-- Absolute -->
+    <div style="position: absolute; left: 200px; top: 300px; background-color: lightcoral;">
+        <p>Posición <strong>absolute</strong> (se mueve respecto al contenedor más cercano con posición definida)</p>
+    </div>
+
+    <!-- Fixed -->
+    <div style="position: fixed; bottom: 10px; right: 10px; background-color: orange;">
+        <p>Posición <strong>fixed</strong> (permanece fija al hacer scroll)</p>
+    </div>
+
+    <!-- Sticky -->
+    <div style="position: sticky; top: 0; background-color: yellow;">
+        <p>Posición <strong>sticky</strong> (se comporta como relative y fixed al hacer scroll)</p>
+    </div>
+
+</body>
+</html>
