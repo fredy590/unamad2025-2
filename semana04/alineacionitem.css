@@ -1,0 +1,15 @@
+*{
+box-sizing:border-box;
+margin:0px;
+padding:0px;
+
+}
+
+.flex-inicio {
+font-size:40px;
+display:flex;
+width: 100%;
+justify-content: flex-start;
+
+
+}
