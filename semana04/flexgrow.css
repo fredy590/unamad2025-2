@@ -1,26 +1,115 @@
-box-sizing: border-box;
+*{
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-}
 
-.box{
+}
+.flex-inicio{
+    font-size: 40px;
     display: flex;
-    width: 300px;
-    color: white;
-    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
 }
 
-.box div{
-    width: 300px;
-    background-color: green;
-    font-size: 50px;
-}
-.box div:first-child{
-    background-color: yellow;
-    flex-grow: 1;
+.flex-inicio div{
+    background: aquamarine;
 }
 
-.box div:last-child{
-    background-color: yellow;
-    flex-grow: 1;
+.flex-inicio div:first-child{
+    background: yellow;
+}
+.flex-inicio div:last-child{
+    background: yellow;
+}
+
+/final/
+.flex-final{
+    font-size: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.flex-final div{
+    background: aquamarine;
+}
+
+.flex-final div:first-child{
+    background: yellow;
+}
+.flex-final div:last-child{
+    background: yellow;
+}
+
+/central/
+.flex-center{
+    font-size: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.flex-center div{
+    background: aquamarine;
+}
+
+.flex-center div:first-child{
+    background: yellow;
+}
+.flex-center div:last-child{
+    background: yellow;
+}
+/between/
+.flex-between{
+    font-size: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.flex-between div{
+    background: aquamarine;
+}
+
+.flex-between div:first-child{
+    background: yellow;
+}
+.flex-between div:last-child{
+    background: yellow;
+}
+/around/
+.flex-around {
+    font-size: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.flex-around div{
+    background: aquamarine;
+}
+
+.flex-around  div:first-child{
+    background: yellow;
+}
+.flex-around div:last-child{
+    background: yellow;
+}
+/evenly/
+.flex-evenly{
+    font-size: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.flex-evenly div{
+    background: aquamarine;
+}
+
+.flex-evenly div:first-child{
+    background: yellow;
+}
+.flex-evenlydiv:last-child{
+    background: yellow;
 }
