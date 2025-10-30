@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box ;
+    padding: 0px;
+    margin: 0px;
+}
+.box{
+    display: flex;
+  /*  flex-wrap: wrap;
+    width: 300px;*/
+    align-items: center;
+    border: 5px solid firebrick;
+  /*  height: 100vh; */
+}
+
+.box div{
+width: 120px;
+height: 200px;
+align-content: center;
+text-align: center;
+
+}
+/*
+.box div:first-child{
+ height: 200px;
+  
+}
+*/
+.box div:nth-child(even){
+    background: yellow;
+  
+}
+
+/*.box div:nth-child(odd){
+    background-color: yellow;
+}
+
+.box div:nth-child(even){
+    background-color:aquamarine;
+}  */
